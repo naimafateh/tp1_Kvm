@@ -8,7 +8,7 @@ for N in app01 app02; do
   sudo virt-install -c qemu:///system --name ubuntu-$N --import \
     --memory 2048 --vcpus 2 --os-variant ubuntu24.04 \
     --disk path=$IMGDIR/ubuntu-$N.qcow2,bus=virtio \
-    --disk path=$CI/seed-$N/seed.iso,device=cdrom \
+    --disk path=/var/lib/libvirt/boot/ubuntu-$N-seed.iso,device=cdrom \
     --network network=default,model=virtio --noautoconsole
 done
 for v in ubuntu-app01 ubuntu-app02; do

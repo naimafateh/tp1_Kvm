@@ -112,7 +112,7 @@ qemu-img info disque-converti.qcow2
 qemu-img compare -f raw -F qcow2 disque-raw.img disque-converti.qcow2
 ```
 
-Le RAW occupe tout son espace (5 Go) alors que le QCOW2 ne prend que l'espace réellement écrit (environ 192 Ko à vide). La conversion RAW vers QCOW2 conserve le contenu : `qemu-img compare` confirme l'identité.
+Les deux disques ont une capacité virtuelle de 5 GiB. Le fichier RAW est un fichier creux (disk size : 4 KiB) : l'espace n'est alloué qu'à l'écriture, mais un RAW rempli occuperait 5 Go. Le QCOW2 occupe 196 KiB à vide (métadonnées) et ne grossit qu'avec les données écrites. La conversion RAW vers QCOW2 conserve le contenu : `qemu-img compare` confirme l'identité.
 Fichiers : `images/formats/`
 
 ## Fichiers non versionnés
