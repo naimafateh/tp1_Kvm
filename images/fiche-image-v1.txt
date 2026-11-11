@@ -1,0 +1,11 @@
+Distribution : Ubuntu Server 24.04.5 LTS, x86_64
+Identifiant : ubuntu-os-capture-v1
+Date : 2026-10-27
+Format : qcow2, capacité virtuelle 15 GiB, taille réelle 3,25 GiB
+Logiciels : cloud-init, qemu-guest-agent, openssh-server
+Rôle prévu : capture du système source (non généralisée)
+Firmware : BIOS (pas de loader ni de nvram) ; disque virtio ; réseau NAT default, DHCP (enp1s0)
+Somme de contrôle : d7bfe33d2431f6d2e8f9cd01d92ef33be9123f8a8b5d018bcf28ef5d44119f08
+Statut : capture non généralisée
+Comptes/données : compte tp1 ; /opt/tp1/version.txt
+Réimportation : qemu-img convert vers un disque de travail, puis virt-install --import

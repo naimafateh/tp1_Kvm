@@ -1,0 +1,9 @@
+OS : Ubuntu Server 24.04.5 LTS, x86_64, 2026-10-27
+Logiciels communs : cloud-init, qemu-guest-agent, openssh-server
+Matériel attendu : BIOS, disque virtio, réseau NAT virtio, 2 vCPU, 2048 Mio
+Nettoyage : machine-id, ssh-hostkeys, udev-persistent-net, logfiles, tmp-files, bash-history (virt-sysprep) ; cloud-init clean --logs --seed
+Comptes conservés : tp1 (compte pédagogique, usage console)
+Restrictions : artefact de laboratoire, non audité, ne pas diffuser
+Personnalisation : cloud-init NoCloud (user-data / meta-data, volume cidata)
+Somme de contrôle : b04b86ca2973fb95a1cc373626bc910885b1e24763a897728daed48e57e9b7a9
+Tests de déploiement : à compléter après la partie F

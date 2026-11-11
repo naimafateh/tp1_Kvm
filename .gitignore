@@ -1,0 +1,4 @@
+*.iso
+*.img
+images/*.qcow2
+templates/*.qcow2
