@@ -1,6 +1,6 @@
 #!/bin/bash
 # Partie C : clonage de la source et comparaison des identités matérielles
-SRC=<vrai-nom>
+SRC=ubuntu-vm01
 IMGDIR=/var/lib/libvirt/images
 sudo virsh -c qemu:///system shutdown $SRC
 sudo virt-clone -c qemu:///system --original $SRC --name ${SRC}-clone \

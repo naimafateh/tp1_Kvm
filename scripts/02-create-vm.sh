@@ -1,6 +1,6 @@
 #!/bin/bash
 # Partie B : création de la VM source depuis l'ISO Ubuntu 24.04 (BIOS, virtio, NAT default)
-SRC=<vrai-nom>
+SRC=ubuntu-vm01
 TP=~/tp1_kvm
 IMGDIR=/var/lib/libvirt/images
 ISO=$(ls $TP/iso/ubuntu-24.04*live-server-amd64.iso | head -1)
